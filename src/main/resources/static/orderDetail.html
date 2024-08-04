@@ -25,9 +25,6 @@
     <link rel="stylesheet" href="assets/css/mobile-menu.css">
     <link rel="stylesheet" href="assets/fonts/flaticon/flaticon.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
-
     <style>
         /* background-color: #f5f5f5; */
         /*header & footer*/
@@ -36,52 +33,41 @@
             border-radius: 50%;
             color: #73B4BA;
         }
-
         .header-user-links li {
             display: inline-block;
         }
-
         .header-user-links i {
             border-radius: 50%;
             font-size: 20px;
             margin-left: 10px;
         }
-
-
         .query-bar a {
             margin-left: 10px;
             margin-right: 10px;
             border-radius: 50%;
         }
-
         .query-bar input {
             background-color: white;
             width: 80%;
         }
-
         #query-member {
             min-width: 200px;
             padding-left: 10px;
         }
-
         #query-member li {
             min-width: 100%;
         }
-
         #query-member img {
             width: 100%;
         }
-
         #query-member .account-list {
             margin-top: 10%;
         }
-
         .reset-margin {
             margin: 0;
             margin-top: 2%;
             background-color: #f5f5f5;
         }
-
         .member-aside {
             width: 30%;
             height: 100%;
@@ -89,7 +75,6 @@
             /* background-color: #f8f8f8; */
 
         }
-
         .member-introduction {
             margin: 0 auto;
             margin-right: 30px;
@@ -99,13 +84,10 @@
             padding-left: 20px;
             background-color: white;
         }
-
         .member-introduction div {
             text-align: center;
             overflow: hidden;
         }
-
-
         .member-list {
             margin-right: 30px;
             margin-top: 50px;
@@ -115,31 +97,26 @@
             padding-left: 60px;
             background-color: white;
         }
-
         .member-list li {
             height: 60px;
             font-size: 18px;
             text-align: left;
             list-style-type: none;
         }
-
         .warn {
             display: inline;
             color: #ff5e7d;
         }
-
         .remind {
             color: #9b9b9b;
             font-size: 12px;
         }
-
         .userPhoto {
             margin: 0 auto;
             display: inline-block;
             width: 30%;
             border-radius: 50%;
         }
-
         .sex {
             font-size: 16px;
             display: block;
@@ -171,7 +148,7 @@
             background-color: white;
             text-align: left;
             display:inline-flex;
-            padding: 20px 0px  20px 0px  ;
+            padding: 20px 0 20px 0 ;
             border-radius: 1%;
         }
         div.store_info div.store_name{
@@ -219,14 +196,11 @@
         div.store_others > button.btn_dispute_apply{
             margin-top: 15px;
         }
-        div.store_others > .state_dispute_apply{
-            text-align: center;
-        }
 
         /* 訂單明細區塊 */
         div.order_info{
             padding-top: 5px ;
-            margin: 5px 0px 0px 0px;
+            margin: 5px 0 0 0;
             background-color: white;
             border-radius: 1%;
         }
@@ -356,14 +330,13 @@
             text-align: center;
             height: 30px;
             width: 300px;
-            border:  0px solid #bebebee4;
+            border:  0 solid #bebebee4;
             font-weight: bold;
             color: black;
             font-size: 18px;
         }
         /* ==== 燈箱 > 評分星號區塊 ===== */
         div.star_block{
-            display: inline-block;
             margin-top: 10px;
             margin-bottom: 50px;
             display: flex;
@@ -383,8 +356,8 @@
         }
         /* ===== 燈箱 > 評分建議區塊 ===== */
         textarea#star_text{
-            border: 0.5px rgba(128, 128, 128, 0.5) solid;
-            margin: 0px 10% 10px 10%;
+            border: 1px rgba(128, 128, 128, 0.5) solid;
+            margin: 0 10% 10px 10%;
             max-height: 100px;
             min-height: 100px;
             max-width: 80%;
@@ -407,6 +380,7 @@
 <body>
 <div class="header"></div>
 
+<!--功能 區塊-->
 <div class="main-content main-content-product left-sidebar">
     <div class="container">
         <div class="row">
@@ -431,7 +405,7 @@
 
                                 <!-- 訂單評分燈箱 -->
                                 <div id="lightbox_star" class="none">
-                                    <form action=”#” method="#">
+                                    <form action=”#”>
                                         <div class="star_title_div ">
                                             <p class="star_title">訂單編號</p>
                                             <div class="star_order_id_div">
@@ -577,8 +551,8 @@
 <script src="assets/js/jquery.scrollbar.min.js"></script>
 <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC3nDHy1dARR-Pa_2jjPCjvsOR4bcILYsM'></script>
 <script src="assets/js/frontend-plugin.js"></script>
-<script src="assets/js/newjs.js"></script>
-<script src="assets/js/general.js"></script>
+<!--<script src="assets/js/newjs.js"></script>-->
+<script src="./js/general.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function(){
@@ -586,12 +560,12 @@
         //======訂單評分按鈕-燈箱=============//
         // 1-1.打開燈箱
         let lightbox_el = document.getElementById("lightbox_star");
-        var btn_order_star = document.getElementsByClassName("btn_order_star")[0];
+        const btn_order_star = document.getElementsByClassName("btn_order_star")[0];
         btn_order_star.addEventListener("click", function(){
             lightbox_el.classList.remove("none");
         });
         // 1-2. 關閉燈箱
-        var btn_star_close = document.getElementById("btn_star_close");
+        const btn_star_close = document.getElementById("btn_star_close");
         btn_star_close.addEventListener("click", function(){
             lightbox_el.classList.add("none");
         });
@@ -622,18 +596,18 @@
 
         //todo 待確認 抓星星數
         if (span_el) {
-            let star_text = getElementById("star_text");
+            let star_text = document.getElementById("star_text").valueOf;
             let star_int = parseInt(span_el.getAttribute("data-star"));
             //todo 待確認 抓星星數
 
         }
         let btn_star_submit = document.getElementById("btn_star_submit");
-        let star_order_id = document.getElementById("star_order_id");
+        let star_order_id = document.getElementById("star_order_id").value;
 
 
         // 3. 評分submit btn 點擊後檢查欄位，送資料到後端，關閉視窗後disabled btn
         btn_star_submit.addEventListener("click", function(e){
-            if(star_text.value.length > 0){
+            if(star_text.length > 0){
 
                 let star_data = new FormData();
                 star_data.append("order_id", star_order_id);
@@ -663,7 +637,7 @@
         //=========================================================================================
         //btn 爭議申請
         // 1. 當訂單建立日超過2天 鎖定爭議btn
-        var btn_dispute_apply = document.getElementsByClassName("btn_dispute_apply")[0];
+        const btn_dispute_apply = document.getElementsByClassName("btn_dispute_apply")[0];
         let order_date_el = document.getElementById("order_date");
         if (order_date_el) {
             const date_text = order_date_el.textContent; // 取得 <td> 裡的文本
@@ -700,7 +674,7 @@
 
         //=========================================================================================
         //btn 回上一頁
-        var order_btn_back = document.getElementsByClassName("order_btn_back")[0];
+        const order_btn_back = document.getElementsByClassName("order_btn_back")[0];
         order_btn_back.addEventListener("click", function(){
             history.back();
         });
