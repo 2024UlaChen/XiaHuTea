@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Projects</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <div class="storeheader"></div>
+        <div class="storeaside"></div>
+        <div class="content-wrapper">
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Edit Customer Detail</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active">Customer Management</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="card ">
+                    <div class="card-header">
+                        <h3 class="card-title">Detail</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="customerName">姓名</label>
+                                <input type="text" class="form-control" id="customerName" placeholder="會員姓名">
+                            </div>
+                            <div class="form-group clearfix">
+                                <div>
+                                    <label >性別</label>
+                                </div>
+                                <div class="icheck-primary d-inline">
+                                    <input type="radio" id="woman" name="customerSex" >
+                                    <label for="woman">女性</label>
+                                </div>
+                                <div class="icheck-primary d-inline">
+                                    <input type="radio" id="man" name="customerSex">
+                                    <label for="man">男性</label>
+                                </div>
+                                <div class="icheck-primary d-inline">
+                                    <input type="radio" id="other" name="customerSex" >
+                                    <label for="other">未提供</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>生日</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                    </div>
+                                    <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy">
+                                </div>
+                                <!-- /.input group -->
+                            </div>
+
+                            <div class="form-group">
+                                <label for="customerEmail">Email</label>
+                                <input type="email" class="form-control" id="customerEmail" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="customerCellphone">手機</label>
+                                <input type="text" class="form-control" id="customerCellphone" placeholder="手機(限台灣)" maxlength="10" >
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="">手機載具</label>
+                                <input type="text" class="form-control" id="" placeholder="會員姓名">
+                            </div>
+                            <div class="form-group">
+                                <div>
+                                    <label >帳號狀態</label>
+                                </div>
+                                <div class="icheck-primary d-inline">
+                                    <input type="radio" id="customerSuceess" name="customerStatus" >
+                                    <label for="customerSuceess">啟用</label>
+                                </div>
+                                <div class="icheck-primary d-inline">
+                                    <input type="radio" id="customerFail" name="customerStatus">
+                                    <label for="customerFail">停用</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerSignDate">註冊時間</label>
+                                <input type="date" class="form-control"  id="customerSignDate" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerMoney">會員錢包</label>
+                                <input type="text" class="form-control" id="customerMoney" disabled >
+                            </div>
+                            <div class="form-group">
+                                <label for="customerRemark">備註</label>
+                                <input type="text" class="form-control" id="customerRemark" placeholder="備註">
+                            </div>
+
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer row">
+                            <div class="form-group col-sm-6">
+                                <button type="submit" class="btn btn-primary float-right">Submit</button>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <button type="submit" class="btn btn-default ">Back</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </section>
+        </div>
+        <div class="storefooter"></div>
+    </div>
+
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+
+    <script src="dist/js/adminlte.js"></script>
+    <script src="dist/js/demo.js"></script>
+    <script src="js/storegeneral.js"></script>
+    <script src="js/member.js"></script>
+
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true, "lengthChange": false, "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        });
+    </script>
+</body>
+
+</html>
