@@ -119,13 +119,13 @@
                                         <label>處理狀態</label>
                                         <label>
                                             <select id="select_status">
-                                                <option value=”0” selected>請選擇</option>
-                                                <option value=”1”>未處理</option>
-                                                <option value=”2”>同意</option>
-                                                <option value=”3”>不同意</option>
+                                                <option value="" selected>請選擇</option>
+                                                <option value="未處理">未處理</option>
+                                                <option value="同意">同意</option>
+                                                <option value="不同意">不同意</option>
                                             </select>
                                         </label>
-                                        <button style="float: right;">查詢</button>
+                                        <button id="btn_select" style="float: right;">查詢</button>
                                     </div>
                                     <!-- /.查詢欄位 -->
                                     <!-- 爭議訂單列表    -->
@@ -143,66 +143,66 @@
                                         </thead>
                                         <tbody id="dispute_tbody">
                                             <tr>
-                                                <td>2024/07/01</td>
-                                                <td><a href="./storeDisputeDetail.html">R240701001</a></td>
-                                                <td>2407010013</td>
-                                                <td>陳QQ</td>
-                                                <td>一沐日汐止店</td>
-                                                <td>未處理</td>
+                                                <td class="dispute_date_value">2024/07/01</td>
+                                                <td class="dispute_id_value"><a href="./storeDisputeDetail.html">R240701001</a></td>
+                                                <td class="order_id_value">2407010013</td>
+                                                <td class="order_username_value">陳QQ</td>
+                                                <td class="order_store_value">一沐日汐止店</td>
+                                                <td class="dispute_status_value">未處理</td>
                                                 <td>300</td>
                                             </tr>
                                             <tr>
-                                                <td>2024/07/01</td>
-                                                <td><a href="#">R240701002</a></td>
-                                                <td>2407010010</td>
-                                                <td>廖寧寧</td>
-                                                <td>鶴茶樓中正店</td>
-                                                <td>同意</td>
+                                                <td class="dispute_date_value">2024/08/01</td>
+                                                <td class="dispute_id_value"><a href="./storeDisputeDetail.html">R240701002</a></td>
+                                                <td class="order_id_value">2407010010</td>
+                                                <td class="order_username_value">廖NN</td>
+                                                <td class="order_store_value">鶴茶樓中正店</td>
+                                                <td class="dispute_status_value">同意</td>
                                                 <td>80</td>
                                             </tr>
                                             <tr>
-                                                <td>2024/07/01</td>
-                                                <td><a href="#">R240721004</a></td>
-                                                <td>2407210099</td>
-                                                <td>潘安妮</td>
-                                                <td>得正淡水店</td>
-                                                <td>不同意</td>
+                                                <td class="dispute_date_value">2024/09/01</td>
+                                                <td class="dispute_id_value"><a href="./storeDisputeDetail.html">R240721004</a></td>
+                                                <td class="order_id_value">2407210099</td>
+                                                <td class="order_username_value">潘AA</td>
+                                                <td class="order_store_value">得正淡水店</td>
+                                                <td class="dispute_status_value">不同意</td>
                                                 <td>1100</td>
                                             </tr>
                                             <tr>
-                                                <td>2024/07/01</td>
-                                                <td><a href="#">R240901044</a></td>
-                                                <td>2408110013</td>
-                                                <td>紀小琴</td>
-                                                <td>鶴茶樓中正店</td>
-                                                <td>同意</td>
+                                                <td class="dispute_date_value">2024/07/15</td>
+                                                <td class="dispute_id_value"><a href="./storeDisputeDetail.html">R240901044</a></td>
+                                                <td class="order_id_value">2408110013</td>
+                                                <td class="order_username_value">紀FF</td>
+                                                <td class="order_store_value">鶴茶樓中正店</td>
+                                                <td class="dispute_status_value">同意</td>
                                                 <td>50</td>
                                             </tr>
                                             <tr>
-                                                <td>2024/07/01</td>
-                                                <td><a href="#">R240709001</a></td>
-                                                <td>2407090019</td>
-                                                <td>鐘小芳</td>
-                                                <td>萬波新莊店</td>
-                                                <td>同意</td>
+                                                <td class="dispute_date_value">2024/08/15</td>
+                                                <td class="dispute_id_value"><a href="./storeDisputeDetail.html">R240709001</a></td>
+                                                <td class="order_id_value">2407090019</td>
+                                                <td class="order_username_value">鐘XX</td>
+                                                <td class="order_store_value">萬波新莊店</td>
+                                                <td class="dispute_status_value">同意</td>
                                                 <td>180</td>
                                             </tr>
                                             <tr>
-                                                <td>2024/07/01</td>
-                                                <td><a href="#">R240711041</a></td>
-                                                <td>2407080083</td>
-                                                <td>吳家家</td>
-                                                <td>鶴茶樓中正店</td>
-                                                <td>未處理</td>
+                                                <td class="dispute_date_value">2024/08/10</td>
+                                                <td class="dispute_id_value"><a href="./storeDisputeDetail.html">R240711041</a></td>
+                                                <td class="order_id_value">2407080083</td>
+                                                <td class="order_username_value">吳YY</td>
+                                                <td class="order_store_value">鶴茶樓中正店</td>
+                                                <td class="dispute_status_value">未處理</td>
                                                 <td>220</td>
                                             </tr>
                                             <tr>
-                                                <td>2024/07/01</td>
-                                                <td><a href="#">R240706001</a></td>
-                                                <td>2407040047</td>
-                                                <td>劉小渝</td>
-                                                <td>一沐日汐止店</td>
-                                                <td>未處理</td>
+                                                <td class="dispute_date_value">2024/07/01</td>
+                                                <td class="dispute_id_value"><a href="./storeDisputeDetail.html">R240706001</a></td>
+                                                <td class="order_id_value">2407040047</td>
+                                                <td class="order_username_value">劉zz</td>
+                                                <td class="order_store_value">一沐日汐止店</td>
+                                                <td class="dispute_status_value">未處理</td>
                                                 <td>240</td>
                                             </tr>
                                         </tbody>
@@ -257,11 +257,73 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
 
-            //===========================================================================
             //todo 查詢功能
 
+            let btn_select = document.getElementById("btn_select");
+            btn_select.addEventListener("click", function () {
 
+                let select_dispute_id = document.getElementsByClassName("select_order")[0]?.value.toLowerCase() || "";
+                let select_order_id = document.getElementsByClassName("select_order")[1]?.value.toLowerCase() || "";
+                let select_order_user = document.getElementsByClassName("select_order")[2]?.value.toLowerCase() || "";
+                let select_order_store = document.getElementsByClassName("select_order")[3]?.value.toLowerCase() || "";
+                let select_dispute_date1 = document.getElementsByClassName("select_date")[0]?.value || "";
+                let select_dispute_date2 = document.getElementsByClassName("select_date")[1]?.value || "";
+                let select_dispute_status = document.getElementById("select_status").value || "";
 
+                let dispute_rows = document.querySelectorAll("#dispute_tbody tr");
+                dispute_rows.forEach(row => {
+
+                    // 檢查是否存在所有需要的元素
+                    let dispute_id_el = row.getElementsByClassName("dispute_id_value")[0];
+                    let order_id_el = row.getElementsByClassName("order_id_value")[0];
+                    let order_user_el = row.getElementsByClassName("order_username_value")[0];
+                    let order_store_el = row.getElementsByClassName("order_store_value")[0];
+                    let dispute_status_el = row.getElementsByClassName("dispute_status_value")[0];
+                    let dispute_date_el = row.getElementsByClassName("dispute_date_value")[0];
+
+                    if (!dispute_id_el || !order_id_el || !order_user_el || !order_store_el || !dispute_status_el || !dispute_date_el) {
+                        return; // 跳過此列
+                    }
+                    // 取得訂單列表資料
+                    let dispute_id = dispute_id_el.innerText.trim().toLowerCase();
+                    let order_id = order_id_el.innerText.trim().toLowerCase();
+                    let order_user = order_user_el.innerText.trim().toLowerCase();
+                    let order_store = order_store_el.innerText.trim().toLowerCase();
+                    let dispute_status = dispute_status_el.innerText.trim();
+                    let order_date = dispute_date_el.innerText.trim();
+
+                    let show_row = true;
+
+                    // 篩選條件
+                    if (select_dispute_id && !dispute_id.includes(select_dispute_id)) {
+                        show_row = false;
+                    }
+                    if (select_order_id && !order_id.includes(select_order_id)) {
+                        show_row = false;
+                    }
+                    if (select_order_user && !order_user.includes(select_order_user)) {
+                        show_row = false;
+                    }
+                    if (select_order_store && !order_store.includes(select_order_store)) {
+                        show_row = false;
+                    }
+                    if (select_dispute_status && dispute_status !== select_dispute_status) {
+                        show_row = false;
+                    }
+
+                    //todo: 待資料庫完成後，再處理時區問題
+                    if (select_dispute_date1 && select_dispute_date2) {
+                        let order_date_obj = new Date(order_date.replace(/-/g,'/'));
+                        let date1 = new Date(select_dispute_date1);
+                        let date2 = new Date(select_dispute_date2);
+                        if (order_date_obj < date1 || order_date_obj > date2) {
+                            show_row = false;
+                        }
+                    }
+                    // 顯示或隱藏該列
+                    row.style.display = show_row ? "" : "none";
+                });
+            });
         });
     </script>
 </body>
