@@ -27,6 +27,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
         /* background-color: #f5f5f5; */
 
         div.header-message > h1 {
@@ -83,73 +87,88 @@
             font-size: 18px;
             text-align: left;
             list-style-type: none;
+            color: black;
         }
 
-        * {
-            box-sizing: border-box;
-        }
-
-        ul.list {
+        ul.card-list {
             margin: 24px 0 0 0;
             padding: 0;
             list-style: none;
         }
 
-        ul.list > li {
-            margin-bottom: 30px;
+        ul.card-list > li {
+            margin-bottom: 10px;
+            box-shadow: 0px 2px 0px 0px rgba(56, 55, 53, 0.33);
         }
 
-        ul.list > li:last-child {
+        ul.card-list > li:last-child {
             margin-bottom: 0;
         }
 
-        ul.list > li > a.link_title {
+        ul.card-list > li > a.link_title {
             display: block;
             width: 100%;
-            color: rgba(56, 55, 53, 0.33);
+            color: black;
             background-color: white;
-            box-shadow: 0px 2px 0px 0px rgba(56, 55, 53, 0.33);
-            padding: 8px 40px;
+            padding: 15px 0px;
             text-decoration: none;
-            font-size: 24px;
-            font-weight: normal;
+            font-size: 16px;
         }
 
-        ul.list > li > a.link_title::after {
+        ul.card-list > li > a.link_title::after {
             content: "";
             display: block;
             clear: both;
         }
 
-        ul.list > li > a.link_title button.switch_btn {
+        ul.card-list > li > a.link_title button.switch_btn {
             float: right;
             display: inline-block;
             background: none;
             border: 0;
             outline: none;
-            color: white;
-            font-size: 24px;
+            color: #73B4BA;
+            font-size: 30px;
+            padding: 0px;
         }
 
-        ul.list > li > a.link_title button.switch_btn span.-minus {
+        ul.card-list > li > a.link_title button.switch_btn span.-minus {
             display: none;
         }
 
-        ul.list > li > div.inner_block {
+        ul.card-list > li > div.inner_block {
             font-size: 18px;
             color: #4a4a4a;
             margin-top: 8px;
-            padding: 0 40px;
+            padding: 0px 0px 10px 10px;
             line-height: 1.6;
             display: none;
         }
 
-        ul.list > li.-on > a.link_title button.switch_btn span.-plus {
+        ul.card-list > li.-on > a.link_title button.switch_btn span.-plus {
             display: none;
+
         }
 
-        ul.list > li.-on > a.link_title button.switch_btn span.-minus {
+        ul.card-list > li.-on > a.link_title button.switch_btn span.-minus {
             display: inline-block;
+        }
+
+        div.main-content{
+            background-color: #f5f5f5;
+            margin: 10px
+        }
+
+        div.main-card{
+            padding:30px;
+            background: white;
+            width: auto
+        }
+
+        div.card-title{
+            font-size: 18px;
+            color: black;
+            font-weight: bold;
         }
 
     </style>
@@ -182,28 +201,24 @@
                             </div>
                         </div>
                         <div class="col-lg-9 no-padding">
-                            <div class="" style="background-color: #f5f5f5; margin: 10px">
+                            <div class="main-content" style="">
 
-                                <div style="padding:30px; background: white;width: auto">
-                                    <div >
-                                        <div id="card_0" class="bg-white q-my-md q-py-md border-around">
-                                            <div class="font-size-subtitle-1 text-weight-normal ">
-                                                新手上路
-                                            </div>
-                                        </div>
+                                <div class="main-card" >
+                                    <div class="card-title" >
+                                        新手上路
                                     </div>
-                                    <ul class="list">
+                                    <ul class="card-list">
                                         <li>
                                             <a class="link_title" href="#">
                                                 <button type="button" class="switch_btn">
                                                     <span class="-plus">+</span>
                                                     <span class="-minus">-</span>
                                                 </button>
-                                                Q1. 如何加入會員？
+                                                [ 訂餐流程 ] 如何使用你訂訂餐？
                                             </a>
 
                                             <div class="inner_block">
-                                                A1. 加入會員須經由書面方式加入會員須經由書面方式加入會員須經由書面方式加入會員須經由書面方式加入會員須經由書面方式
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam consectetur debitis deserunt dolores eaque eius, est fugiat impedit ipsam itaque non obcaecati praesentium quo reprehenderit sunt suscipit veniam vero.
                                             </div>
 
                                         </li>
@@ -211,14 +226,40 @@
                                         <li>
                                             <a class="link_title" href="#">
                                                 <button type="button" class="switch_btn">
-                                                    <span class="-plus">+</span><span class="-minus">-</span>
+                                                    <span class="-plus">+</span>
+                                                    <span class="-minus">-</span>
                                                 </button>
-                                                Q2. 如何加入會員？
+                                                [ 最愛店家 ] 建立我的最愛店家
                                             </a>
                                             <div class="inner_block">
-                                                A2. 加入會員須經由書面方式加入會員須經由書面方式加入會員須經由書面方式加入會員須經由書面方式加入會員須經由書面方式
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci commodi eveniet exercitationem illum libero modi nostrum saepe tempore temporibus. Atque consequatur ducimus enim ex id porro, quam rerum soluta!
                                             </div>
+                                        </li>
 
+                                        <li>
+                                            <a class="link_title" href="#">
+                                                <button type="button" class="switch_btn">
+                                                    <span class="-plus">+</span>
+                                                    <span class="-minus">-</span>
+                                                </button>
+                                                [ 取餐資訊 ] 門市的營業時間/電話/地址/外送限制/取餐方式/支付方式/金額上限
+                                            </a>
+                                            <div class="inner_block">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci commodi eveniet exercitationem illum libero modi nostrum saepe tempore temporibus. Atque consequatur ducimus enim ex id porro, quam rerum soluta!
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="link_title" href="#">
+                                                <button type="button" class="switch_btn">
+                                                    <span class="-plus">+</span>
+                                                    <span class="-minus">-</span>
+                                                </button>
+                                                [ 折價券 ] 如何使用折價券享有折扣？
+                                            </a>
+                                            <div class="inner_block">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci commodi eveniet exercitationem illum libero modi nostrum saepe tempore temporibus. Atque consequatur ducimus enim ex id porro, quam rerum soluta!
+                                            </div>
                                         </li>
                                     </ul>
 
