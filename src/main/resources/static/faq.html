@@ -173,14 +173,22 @@
 
         div#faq-query-bar{
             background: white;
+            display: flex;
+            align-items: center;
         }
 
         div#faq-query-bar input{
             width: auto;
             border: 0px;
+            flex: 1;
         }
         #faq-nav{
             padding: 0px 15px 0px 0px;
+        }
+        div#faq-query-bar a{
+            display: flex;
+            align-items: center;
+            margin: 20px;
         }
 
     </style>
@@ -197,22 +205,32 @@
 
                         <div class="col-lg-3" id="faq-nav" >
                             <div id="faq-query-bar">
-                                <input type="text" placeholder="搜尋問題關鍵字" id="">
+                                <input type="text" placeholder="搜尋問題關鍵字" >
                                 <a href="#">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </a>
                             </div>
                             <div>
                                 <ul class="fqa-list">
-                                    <li>新手上路</li>
-                                    <li>會員資訊</li>
-                                    <li>訂購資訊</li>
-                                    <li>會員優惠與折扣活動</li>
-                                    <li>其他問題</li>
+                                    <li>
+                                        <a href="#">新手上路</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">會員資訊</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">訂購資訊</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">會員優惠與折扣活動</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">其他問題</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-9 no-padding">
+                        <div class="col-lg-9 no-padding" style="margin-top: 10px">
                             <div class="card-main-content">
 
                                 <div class="main-card" >
