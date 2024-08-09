@@ -31,6 +31,7 @@
         * {
             box-sizing: border-box;
         }
+
         /* background-color: #f5f5f5; */
 
         div.header-message > h1 {
@@ -66,6 +67,7 @@
             margin-top: 2%;
             background-color: #f5f5f5;
             padding: 20px;
+            padding-top: 0;
         }
 
         /*.fqa-aside {*/
@@ -76,14 +78,14 @@
 
         /*}*/
 
-        .fqa-list {
+        #title-list {
             /*margin-right: 30px;*/
             margin-top: 20px;
             padding: 20px;
             background-color: white;
         }
 
-        .fqa-list li {
+        #title-list li {
             height: 60px;
             font-size: 18px;
             text-align: left;
@@ -91,22 +93,22 @@
             color: black;
         }
 
-        ul.card-list {
+        ul.faq-list {
             margin: 24px 0 0 0;
             padding: 0;
             list-style: none;
         }
 
-        ul.card-list > li {
+        ul.faq-list > li {
             margin-bottom: 10px;
             box-shadow: 0px 2px 0px 0px rgba(56, 55, 53, 0.33);
         }
 
-        ul.card-list > li:last-child {
+        ul.faq-list > li:last-child {
             margin-bottom: 0;
         }
 
-        ul.card-list > li > a.link_title {
+        ul.faq-list > li > a.link_title {
             display: block;
             width: 100%;
             color: black;
@@ -116,13 +118,13 @@
             font-size: 16px;
         }
 
-        ul.card-list > li > a.link_title::after {
+        ul.faq-list > li > a.link_title::after {
             content: "";
             display: block;
             clear: both;
         }
 
-        ul.card-list > li > a.link_title button.switch_btn {
+        ul.faq-list > li > a.link_title button.switch_btn {
             float: right;
             display: inline-block;
             background: none;
@@ -133,11 +135,11 @@
             padding: 0px;
         }
 
-        ul.card-list > li > a.link_title button.switch_btn span.-minus {
+        ul.faq-list > li > a.link_title button.switch_btn span.-minus {
             display: none;
         }
 
-        ul.card-list > li > div.inner_block {
+        ul.faq-list > li > div.inner_block {
             font-size: 18px;
             color: #4a4a4a;
             margin-top: 8px;
@@ -146,49 +148,59 @@
             display: none;
         }
 
-        ul.card-list > li.-on > a.link_title button.switch_btn span.-plus {
+        ul.faq-list > li.-on > a.link_title button.switch_btn span.-plus {
             display: none;
 
         }
 
-        ul.card-list > li.-on > a.link_title button.switch_btn span.-minus {
+        ul.faq-list > li.-on > a.link_title button.switch_btn span.-minus {
             display: inline-block;
         }
 
-        div.main-content{
+        div.main-content {
             margin: 0px
         }
 
-        div.main-card{
-            padding:30px;
+        div.faq-card {
+            padding: 30px;
             background: white;
             width: auto
         }
 
-        div.card-title{
+        div.card-title {
             font-size: 18px;
             color: black;
             font-weight: bold;
         }
 
-        div#faq-query-bar{
+        div#faq-query-bar {
             background: white;
             display: flex;
             align-items: center;
+            margin-top: 20px;
         }
 
-        div#faq-query-bar input{
+        div#faq-query-bar input {
             width: auto;
             border: 0px;
-            flex: 1;
+            flex: 1; /* 讓 input 佔滿剩餘的空間 */
         }
-        #faq-nav{
+
+        #faq-nav {
             padding: 0px 15px 0px 0px;
         }
-        div#faq-query-bar a{
+
+        div#faq-nav a {
             display: flex;
             align-items: center;
-            margin: 20px;
+            padding-right: 15px;
+
+        }
+
+        div#card-list {
+            margin-top: 20px;
+            padding: 0;
+
         }
 
     </style>
@@ -203,15 +215,15 @@
                 <div class="col-sm-12">
                     <div class="form-contact reset-margin">
 
-                        <div class="col-lg-3" id="faq-nav" >
+                        <div class="col-lg-3" id="faq-nav">
                             <div id="faq-query-bar">
-                                <input type="text" placeholder="搜尋問題關鍵字" >
+                                <input type="text" placeholder="搜尋問題關鍵字">
                                 <a href="#">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </a>
                             </div>
                             <div>
-                                <ul class="fqa-list">
+                                <ul id="title-list">
                                     <li>
                                         <a href="#">新手上路</a>
                                     </li>
@@ -230,71 +242,78 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-9 no-padding" style="margin-top: 10px">
-                            <div class="card-main-content">
-
-                                <div class="main-card" >
-                                    <div class="card-title" >
-                                        新手上路
-                                    </div>
-                                    <ul class="card-list">
-                                        <li>
-                                            <a class="link_title" href="#">
-                                                <button type="button" class="switch_btn">
-                                                    <span class="-plus">+</span>
-                                                    <span class="-minus">-</span>
-                                                </button>
-                                                [ 訂餐流程 ] 如何使用你訂訂餐？
-                                            </a>
-
-                                            <div class="inner_block">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam consectetur debitis deserunt dolores eaque eius, est fugiat impedit ipsam itaque non obcaecati praesentium quo reprehenderit sunt suscipit veniam vero.
-                                            </div>
-
-                                        </li>
-
-                                        <li>
-                                            <a class="link_title" href="#">
-                                                <button type="button" class="switch_btn">
-                                                    <span class="-plus">+</span>
-                                                    <span class="-minus">-</span>
-                                                </button>
-                                                [ 最愛店家 ] 建立我的最愛店家
-                                            </a>
-                                            <div class="inner_block">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci commodi eveniet exercitationem illum libero modi nostrum saepe tempore temporibus. Atque consequatur ducimus enim ex id porro, quam rerum soluta!
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <a class="link_title" href="#">
-                                                <button type="button" class="switch_btn">
-                                                    <span class="-plus">+</span>
-                                                    <span class="-minus">-</span>
-                                                </button>
-                                                [ 取餐資訊 ] 門市的營業時間/電話/地址/外送限制/取餐方式/支付方式/金額上限
-                                            </a>
-                                            <div class="inner_block">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci commodi eveniet exercitationem illum libero modi nostrum saepe tempore temporibus. Atque consequatur ducimus enim ex id porro, quam rerum soluta!
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <a class="link_title" href="#">
-                                                <button type="button" class="switch_btn">
-                                                    <span class="-plus">+</span>
-                                                    <span class="-minus">-</span>
-                                                </button>
-                                                [ 折價券 ] 如何使用折價券享有折扣？
-                                            </a>
-                                            <div class="inner_block">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci commodi eveniet exercitationem illum libero modi nostrum saepe tempore temporibus. Atque consequatur ducimus enim ex id porro, quam rerum soluta!
-                                            </div>
-                                        </li>
-                                    </ul>
-
+                        <div class="col-lg-9" id="card-list">
+                            <div class="faq-card">
+                                <div class="card-title">
+                                    新手上路
                                 </div>
+                                <ul class="faq-list">
+                                    <li>
+                                        <a class="link_title" href="#">
+                                            <button type="button" class="switch_btn">
+                                                <span class="-plus">+</span>
+                                                <span class="-minus">-</span>
+                                            </button>
+                                            [ 訂餐流程 ] 如何使用你訂訂餐？
+                                        </a>
+
+                                        <div class="inner_block">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam
+                                            consectetur debitis deserunt dolores eaque eius, est fugiat impedit ipsam
+                                            itaque non obcaecati praesentium quo reprehenderit sunt suscipit veniam
+                                            vero.
+                                        </div>
+
+                                    </li>
+
+                                    <li>
+                                        <a class="link_title" href="#">
+                                            <button type="button" class="switch_btn">
+                                                <span class="-plus">+</span>
+                                                <span class="-minus">-</span>
+                                            </button>
+                                            [ 最愛店家 ] 建立我的最愛店家
+                                        </a>
+                                        <div class="inner_block">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci
+                                            commodi eveniet exercitationem illum libero modi nostrum saepe tempore
+                                            temporibus. Atque consequatur ducimus enim ex id porro, quam rerum soluta!
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <a class="link_title" href="#">
+                                            <button type="button" class="switch_btn">
+                                                <span class="-plus">+</span>
+                                                <span class="-minus">-</span>
+                                            </button>
+                                            [ 取餐資訊 ] 門市的營業時間/電話/地址/外送限制/取餐方式/支付方式/金額上限
+                                        </a>
+                                        <div class="inner_block">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci
+                                            commodi eveniet exercitationem illum libero modi nostrum saepe tempore
+                                            temporibus. Atque consequatur ducimus enim ex id porro, quam rerum soluta!
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <a class="link_title" href="#">
+                                            <button type="button" class="switch_btn">
+                                                <span class="-plus">+</span>
+                                                <span class="-minus">-</span>
+                                            </button>
+                                            [ 折價券 ] 如何使用折價券享有折扣？
+                                        </a>
+                                        <div class="inner_block">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci
+                                            commodi eveniet exercitationem illum libero modi nostrum saepe tempore
+                                            temporibus. Atque consequatur ducimus enim ex id porro, quam rerum soluta!
+                                        </div>
+                                    </li>
+                                </ul>
+
                             </div>
+                            
                         </div>
                     </div>
                 </div>
